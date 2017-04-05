@@ -18,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  * @author karolina.gkallajian
  */
 @WebServlet("/agenda")
-public class AgendaServlet extends HttpServlet{
-    
+public class AgendaServlet extends HttpServlet {
+
     /**
      *
      * @param request
@@ -28,19 +28,17 @@ public class AgendaServlet extends HttpServlet{
      * @throws IOException
      */
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        try(PrintWriter out = response.getWriter()){
+        try (PrintWriter out = response.getWriter()) {
             for (int i = 0; i < 10; i++) {
-                
                 out.print("<h1>*~*~*Olá mundo Web*~*~*</h1>");
                 out.print("<h1>*~*~*~*~*~*~*~*~*~*~*~*</h1>");
-                
             }
             out.flush();
-        }catch(IOException e){
-            
+        } catch (IOException e) {
+
         }
     }
-    
+
 }
